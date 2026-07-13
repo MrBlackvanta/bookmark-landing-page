@@ -1,6 +1,6 @@
-# Frontend Mentor - Clipboard landing page solution
+# Frontend Mentor - Bookmark landing page solution
 
-This is a solution to the [Clipboard landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -20,8 +20,8 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/MrBlackvanta/clipboard-landing-page)
-- Live Site URL: [Netlify](https://vanta-clipboard-landing-page.netlify.app)
+- Solution URL: [GitHub](https://github.com/MrBlackvanta/bookmark-landing-page)
+- Live Site URL: [Netlify](https://vanta-bookmark-landing-page.netlify.app)
 
 ## My process
 
