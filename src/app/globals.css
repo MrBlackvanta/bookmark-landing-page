@@ -13,7 +13,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-grayish-blue;
+    @apply bg-white font-sans text-lg text-grayish-blue;
   }
   a,
   button {
