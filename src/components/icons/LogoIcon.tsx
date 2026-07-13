@@ -32,7 +32,7 @@ export default function LogoIcon({
           />
           <path
             d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
-            className="fill-white"
+            className={cn("fill-white", { "fill-very-dark-blue": inverted })}
           />
         </g>
       </g>

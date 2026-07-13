@@ -2,6 +2,7 @@
 
 import { CloseIcon, HamburgerIcon, LogoIcon } from "@/components/icons";
 import { navLinks, socialLinks } from "@/data";
+import { cn } from "@/lib";
 import { useEffect, useRef, useState } from "react";
 
 export default function MobileMenu() {
@@ -73,66 +74,69 @@ export default function MobileMenu() {
         <HamburgerIcon className="w-4.5" />
       </button>
 
-      {open && (
-        <div
-          ref={panelRef}
-          id="mobile-menu"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Menu"
-          className="bg-very-dark-blue/95 fixed inset-0 z-50 flex flex-col overflow-y-auto px-6 pt-10 pb-12 text-white"
-        >
-          <div className="flex items-center justify-between">
-            <LogoIcon variant="inverted" className="w-37" />
-            <button
-              type="button"
-              onClick={close}
-              aria-label="Close menu"
-              className="-m-2 cursor-pointer p-2 text-white"
-            >
-              <CloseIcon className="w-4" />
-            </button>
-          </div>
-
-          <nav aria-label="Mobile" className="mt-10 border-t border-white/15">
-            <ul>
-              {navLinks.map((link) => (
-                <li key={link.href} className="border-b border-white/15">
-                  <a
-                    href={link.href}
-                    onClick={close}
-                    className="hover:text-soft-red block py-5 text-center text-xl tracking-[0.15em] uppercase transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <a
-            href="#login"
+      <div
+        ref={panelRef}
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+        inert={!open}
+        className={cn(
+          "bg-very-dark-blue/95 fixed inset-0 z-50 flex flex-col overflow-y-auto px-6 pt-10 pb-12 text-white",
+          "hidden opacity-0 transition-[opacity,display] transition-discrete duration-300 ease-out motion-reduce:transition-none",
+          { "opacity-100 starting:opacity-0": open },
+        )}
+      >
+        <div className="flex items-center justify-between">
+          <LogoIcon variant="inverted" className="w-37" />
+          <button
+            type="button"
             onClick={close}
-            className="hover:text-very-dark-blue mt-6 rounded-md border-2 border-white py-3 text-center text-xl tracking-[0.15em] uppercase transition-colors hover:bg-white"
+            aria-label="Close menu"
+            className="-m-2 cursor-pointer p-2 text-white"
           >
-            Login
-          </a>
+            <CloseIcon className="w-4" />
+          </button>
+        </div>
 
-          <ul className="mt-auto flex justify-center gap-10">
-            {socialLinks.map((social) => (
-              <li key={social.label}>
+        <nav aria-label="Mobile" className="mt-10 border-t border-white/15">
+          <ul>
+            {navLinks.map((link) => (
+              <li key={link.href} className="border-b border-white/15">
                 <a
-                  href={social.href}
-                  aria-label={social.label}
-                  className="hover:text-soft-red block transition-colors"
+                  href={link.href}
+                  onClick={close}
+                  className="hover:text-soft-red block py-5 text-center text-xl tracking-[0.15em] uppercase transition-colors"
                 >
-                  <social.icon className="w-6" />
+                  {link.label}
                 </a>
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        </nav>
+
+        <a
+          href="#login"
+          onClick={close}
+          className="hover:text-very-dark-blue mt-6 rounded-md border-2 border-white py-3 text-center text-xl tracking-[0.15em] uppercase transition-colors hover:bg-white"
+        >
+          Login
+        </a>
+
+        <ul className="mt-auto flex justify-center gap-10">
+          {socialLinks.map((social) => (
+            <li key={social.label}>
+              <a
+                href={social.href}
+                aria-label={social.label}
+                className="hover:text-soft-red block transition-colors"
+              >
+                <social.icon className="w-6" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

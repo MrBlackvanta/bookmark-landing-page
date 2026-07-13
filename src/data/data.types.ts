@@ -10,3 +10,14 @@ export type SocialLink = {
   href: string;
   icon: FC<SVGProps<SVGSVGElement>>;
 };
+
+export type CtaButton = {
+  label: string;
+  href: string;
+  variant: "primary" | "secondary";
+};
+
+export type HeroContent = {
+  title: string;
+  description: string;
+};

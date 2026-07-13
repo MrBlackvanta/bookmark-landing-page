@@ -4,6 +4,7 @@
   --color-soft-blue: hsl(231, 69%, 60%);
   --color-soft-red: hsl(0, 94%, 66%);
   --color-grayish-blue: hsl(229, 8%, 60%);
+  --color-dark-grayish-blue: hsl(228, 12%, 41%);
   --color-very-dark-blue: hsl(229, 31%, 21%);
 
   --shadow-cta: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
@@ -15,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-white font-sans text-lg text-grayish-blue;
+    @apply text-grayish-blue bg-white font-sans text-lg;
   }
   a,
   button {
@@ -24,9 +25,21 @@
 }
 
 @utility v-focus-ring {
-  @apply rounded-xs focus-visible:ring-2 focus-visible:ring-soft-blue focus-visible:ring-offset-2 focus-visible:outline-none;
+  @apply focus-visible:ring-soft-blue rounded-xs focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
 }
 
 @utility v-footer-link {
-  @apply rounded-xs font-medium text-very-dark-blue underline underline-offset-2 transition-colors hover:text-soft-blue;
+  @apply text-very-dark-blue hover:text-soft-blue rounded-xs font-medium underline underline-offset-2 transition-colors;
+}
+
+@utility v-btn {
+  @apply shadow-cta inline-flex items-center justify-center rounded-md border-2 px-4 py-3.5 text-[0.875rem] leading-none font-medium transition-colors;
+}
+
+@utility v-btn-primary {
+  @apply border-soft-blue bg-soft-blue hover:text-soft-blue text-white hover:bg-white;
+}
+
+@utility v-btn-secondary {
+  @apply text-very-dark-blue/75 hover:border-dark-grayish-blue border-[#f7f7fd] bg-[#f7f7fd] hover:bg-white;
 }
