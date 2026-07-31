@@ -6,17 +6,17 @@ export default function Features() {
     <section
       id="features"
       aria-labelledby="features-heading"
-      className="overflow-x-clip px-8 pt-24 md:pt-32"
+      className="overflow-x-clip px-8 pt-35 md:px-10 md:pt-27.5"
     >
-      <div className="mx-auto max-w-276">
-        <div className="mx-auto max-w-110 text-center">
+      <div className="mx-auto max-w-page">
+        <div className="mx-auto max-w-prose text-center">
           <h2
             id="features-heading"
-            className="text-very-dark-blue text-2xl font-medium md:text-[2rem]"
+            className="text-very-dark-blue text-heading tracking-heading md:text-heading-lg font-medium"
           >
             {featuresIntro.title}
           </h2>
-          <p className="text-grayish-blue mt-4 text-[0.9375rem] md:mt-6">
+          <p className="text-grayish-blue text-body md:text-body-lg md:mt-4">
             {featuresIntro.description}
           </p>
         </div>

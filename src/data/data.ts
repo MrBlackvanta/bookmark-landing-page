@@ -1,9 +1,13 @@
 import tab1 from "@/assets/images/illustration-features-tab-1.svg";
 import tab2 from "@/assets/images/illustration-features-tab-2.svg";
 import tab3 from "@/assets/images/illustration-features-tab-3.svg";
+import chromeLogo from "@/assets/images/logo-chrome.svg";
+import firefoxLogo from "@/assets/images/logo-firefox.svg";
+import operaLogo from "@/assets/images/logo-opera.svg";
 import { FacebookIcon, TwitterIcon } from "@/components/icons";
 import type {
   CtaButton,
+  ExtensionCard,
   Feature,
   HeroContent,
   NavLink,
@@ -64,4 +68,16 @@ export const features: Feature[] = [
     image: tab3,
     imageAlt: "",
   },
+];
+
+export const extensionsIntro: SectionIntro = {
+  title: "Download the extension",
+  description:
+    "We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.",
+};
+
+export const extensions: ExtensionCard[] = [
+  { browser: "Chrome", logo: chromeLogo, minVersion: "62" },
+  { browser: "Firefox", logo: firefoxLogo, minVersion: "55" },
+  { browser: "Opera", logo: operaLogo, minVersion: "46" },
 ];

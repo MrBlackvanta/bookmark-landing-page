@@ -5,7 +5,7 @@ import MobileMenu from "./mobile-menu";
 export default function Header() {
   return (
     <header className="px-8 pt-10 md:px-10 md:pt-12">
-      <div className="mx-auto flex max-w-276 items-center justify-between">
+      <div className="mx-auto flex max-w-page items-center justify-between">
         <LogoIcon className="w-37.25" />
 
         <nav aria-label="Primary" className="hidden md:block">
@@ -14,7 +14,7 @@ export default function Header() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-very-dark-blue hover:text-soft-red text-[0.8125rem] tracking-[0.115em] uppercase transition-colors"
+                  className="text-very-dark-blue hover:text-soft-red text-nav tracking-nav uppercase transition-colors"
                 >
                   {link.label}
                 </a>
@@ -23,7 +23,7 @@ export default function Header() {
             <li>
               <a
                 href="#login"
-                className="border-soft-red bg-soft-red shadow-cta hover:text-soft-red ms-1 rounded-md border-2 px-8 py-2.5 text-[0.8125rem] tracking-[0.115em] text-white uppercase transition-colors hover:bg-white"
+                className="border-soft-red bg-soft-red shadow-cta rounded-cta text-nav tracking-nav hover:text-soft-red ms-1 inline-flex h-10 items-center border-2 px-8 font-medium text-white uppercase transition-colors hover:bg-white"
               >
                 Login
               </a>

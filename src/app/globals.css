@@ -6,8 +6,46 @@
   --color-grayish-blue: hsl(229, 8%, 60%);
   --color-dark-grayish-blue: hsl(228, 12%, 41%);
   --color-very-dark-blue: hsl(229, 31%, 21%);
+  --color-off-white: #f7f7f7;
+  --color-rule: rgb(73 93 207 / 0.2);
 
-  --shadow-cta: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  --container-page: 69.375rem;
+  --container-prose: 33.75rem;
+  --container-tabs: 45.625rem;
+
+  --radius-cta: 5px;
+  --radius-card: 15px;
+
+  --shadow-cta: 0 8px 8px -4px rgb(73 93 207 / 0.2);
+  --shadow-card: 0 10px 20px -5px rgb(73 93 207 / 0.2);
+
+  --tracking-heading: -0.003em;
+  --tracking-cta: 0.25px;
+  --tracking-nav: 0.1154em;
+  --tracking-tab: 0.0333em;
+
+  --text-display: 1.875rem;
+  --text-display--line-height: 2.5rem;
+  --text-display-lg: 3rem;
+  --text-display-lg--line-height: 3.25rem;
+  --text-heading: 1.5rem;
+  --text-heading--line-height: 3.25rem;
+  --text-heading-lg: 2rem;
+  --text-heading-lg--line-height: 3.25rem;
+  --text-card-title: 1.25rem;
+  --text-card-title--line-height: 1.5rem;
+  --text-tab: 1rem;
+  --text-tab--line-height: 1.0625rem;
+  --text-nav: 0.8125rem;
+  --text-nav--line-height: 1.0625rem;
+  --text-nav-overlay: 1.25rem;
+  --text-nav-overlay--line-height: 1.0625rem;
+  --text-cta: 0.875rem;
+  --text-cta--line-height: 1.75rem;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.5625rem;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.75rem;
 }
 
 @theme inline {
@@ -16,7 +54,7 @@
 
 @layer base {
   body {
-    @apply text-grayish-blue bg-white font-sans text-lg;
+    @apply text-grayish-blue bg-white font-sans text-body;
   }
   a,
   button {
@@ -33,7 +71,7 @@
 }
 
 @utility v-btn {
-  @apply shadow-cta inline-flex items-center justify-center rounded-md border-2 px-4 py-3.5 text-[0.875rem] leading-none font-medium transition-colors;
+  @apply shadow-cta rounded-cta text-cta tracking-cta inline-flex h-12 items-center justify-center border-2 px-5.5 font-medium transition-colors;
 }
 
 @utility v-btn-primary {
@@ -41,5 +79,53 @@
 }
 
 @utility v-btn-secondary {
-  @apply text-very-dark-blue/75 hover:border-dark-grayish-blue border-[#f7f7fd] bg-[#f7f7fd] hover:bg-white;
+  @apply text-very-dark-blue/75 border-off-white bg-off-white hover:border-dark-grayish-blue hover:bg-white;
+}
+
+@keyframes v-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+}
+
+@keyframes v-reveal-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-3.5rem);
+  }
+}
+
+@keyframes v-reveal-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(3.5rem);
+  }
+}
+
+@utility v-reveal-up {
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: v-reveal-up;
+    animation-duration: 600ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+  }
+}
+
+@utility v-reveal-from-left {
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: v-reveal-from-left;
+    animation-duration: 600ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+  }
+}
+
+@utility v-reveal-from-right {
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: v-reveal-from-right;
+    animation-duration: 600ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+  }
 }

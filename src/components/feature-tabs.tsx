@@ -44,7 +44,7 @@ export default function FeatureTabs() {
         role="tablist"
         aria-label="Features"
         onKeyDown={handleKeyDown}
-        className="border-grayish-blue/20 mx-auto flex max-w-xs flex-col border-t md:max-w-3xl md:flex-row md:justify-center md:border-t-0 md:border-b"
+        className="border-rule md:max-w-tabs mx-auto flex flex-col border-t md:flex-row md:justify-center md:border-t-0 md:border-b"
       >
         {features.map((feature, index) => {
           const selected = index === active;
@@ -58,23 +58,21 @@ export default function FeatureTabs() {
               role="tab"
               id={`feature-tab-${index}`}
               aria-selected={selected}
-              aria-controls={`feature-panel-${index}`}
+              aria-controls="feature-panel"
               tabIndex={selected ? 0 : -1}
               onClick={() => setActive(index)}
               className={cn(
-                "border-grayish-blue/20 flex w-full cursor-pointer justify-center border-b md:w-auto md:flex-1 md:border-b-0",
+                "border-rule flex w-full cursor-pointer justify-center border-b md:w-auto md:flex-1 md:border-b-0",
                 selected
                   ? "text-very-dark-blue"
-                  : "text-grayish-blue hover:text-soft-red",
+                  : "text-very-dark-blue/75 hover:text-soft-red",
               )}
             >
               <span className="inline-flex flex-col items-center pt-5 md:w-full md:py-0">
-                <span className="text-[0.9375rem] tracking-[0.02em]">
-                  {feature.tab}
-                </span>
+                <span className="text-tab tracking-tab">{feature.tab}</span>
                 <span
                   className={cn(
-                    "mt-5 -mb-px h-[3px] w-full rounded-full md:mt-8",
+                    "mt-4 h-1 w-full rounded-full md:mt-6.75",
                     selected ? "bg-soft-red" : "bg-transparent",
                   )}
                 />
@@ -84,46 +82,46 @@ export default function FeatureTabs() {
         })}
       </div>
 
-      {features.map((feature, index) => (
-        <div
-          key={feature.tab}
-          role="tabpanel"
-          id={`feature-panel-${index}`}
-          aria-labelledby={`feature-tab-${index}`}
-          hidden={index !== active}
-          className="mt-16 md:mt-24"
-        >
-          <FeaturePanel feature={feature} />
-        </div>
-      ))}
+      <div
+        role="tabpanel"
+        id="feature-panel"
+        aria-labelledby={`feature-tab-${active}`}
+        className="mt-13 md:mt-9.25"
+      >
+        <FeaturePanel key={active} feature={features[active]} />
+      </div>
     </div>
   );
 }
 
 function FeaturePanel({ feature }: { feature: Feature }) {
   return (
-    <div className="relative flex flex-col items-center gap-16 md:flex-row md:gap-12 lg:gap-28">
-      <div className="relative w-full md:-ml-8 md:w-[47%] md:shrink-0 xl:-ml-20">
+    <div className="flex flex-col items-center gap-12 md:flex-row md:gap-31.25">
+      <div className="v-reveal-from-left relative aspect-536/416 w-full md:w-[48.29%] md:shrink-0">
         <div
           aria-hidden="true"
-          className="bg-soft-blue absolute top-[42%] right-[16%] bottom-[-4%] -z-10 w-screen rounded-r-full md:top-[38%] md:right-[24%] md:bottom-[-8%]"
+          className="bg-soft-blue absolute top-[22.8%] right-[11.25%] bottom-[-7%] -z-10 w-screen rounded-r-full md:top-[28.4%] md:right-[12.1%] md:bottom-[-13%]"
         />
         <Image
           src={feature.image}
           alt={feature.imageAlt}
-          sizes="(min-width: 768px) 47vw, 90vw"
-          className="relative mx-auto h-auto w-full max-w-md md:mx-0 md:max-w-none"
+          fill
+          sizes="(min-width: 768px) 48vw, 90vw"
+          className="object-contain object-center"
         />
       </div>
 
       <div className="text-center md:flex-1 md:text-left">
-        <h3 className="text-very-dark-blue text-2xl font-medium md:text-4xl">
+        <h3 className="v-reveal-from-right text-very-dark-blue text-heading tracking-heading md:text-heading-lg font-medium [animation-delay:100ms]">
           {feature.title}
         </h3>
-        <p className="text-grayish-blue mx-auto mt-4 max-w-md text-[0.9375rem] md:mx-0 md:mt-6">
+        <p className="v-reveal-from-right text-grayish-blue text-body md:text-body-lg [animation-delay:200ms] md:mt-4">
           {feature.description}
         </p>
-        <a href="#" className="v-btn v-btn-primary mt-8 inline-flex">
+        <a
+          href="#"
+          className="v-btn v-btn-primary v-reveal-from-right mt-4 [animation-delay:300ms] md:mt-8"
+        >
           More Info
         </a>
       </div>

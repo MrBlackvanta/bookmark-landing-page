@@ -82,7 +82,7 @@ export default function MobileMenu() {
         aria-label="Menu"
         inert={!open}
         className={cn(
-          "bg-very-dark-blue/95 fixed inset-0 z-50 flex flex-col overflow-y-auto px-6 pt-10 pb-12 text-white",
+          "bg-very-dark-blue/95 fixed inset-0 z-50 flex flex-col overflow-y-auto px-8 pt-10 pb-12 text-white",
           "hidden opacity-0 transition-[opacity,display] transition-discrete duration-300 ease-out motion-reduce:transition-none",
           { "opacity-100 starting:opacity-0": open },
         )}
@@ -106,7 +106,7 @@ export default function MobileMenu() {
                 <a
                   href={link.href}
                   onClick={close}
-                  className="hover:text-soft-red block py-5 text-center text-xl tracking-[0.15em] uppercase transition-colors"
+                  className="hover:text-soft-red text-nav-overlay tracking-nav block py-6 text-center uppercase transition-colors"
                 >
                   {link.label}
                 </a>
@@ -118,7 +118,7 @@ export default function MobileMenu() {
         <a
           href="#login"
           onClick={close}
-          className="hover:text-very-dark-blue mt-6 rounded-md border-2 border-white py-3 text-center text-xl tracking-[0.15em] uppercase transition-colors hover:bg-white"
+          className="hover:text-very-dark-blue rounded-cta text-nav-overlay tracking-nav mt-6 flex h-12 items-center justify-center border-2 border-white font-medium uppercase transition-colors hover:bg-white"
         >
           Login
         </a>
