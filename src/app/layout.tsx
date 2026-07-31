@@ -10,10 +10,29 @@ const rubik = Rubik({
   display: "swap",
 });
 
+const title = "Bookmark landing page";
+const description =
+  "A clean bookmark manager landing page — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
+const siteUrl = "https://vanta-bookmark-landing-page.netlify.app";
+
 export const metadata: Metadata = {
-  title: "Bookmark landing page",
-  description:
-    "A clean bookmark manager landing page — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: title,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 export const viewport: Viewport = {

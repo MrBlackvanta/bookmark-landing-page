@@ -9,7 +9,7 @@ export default function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <ul className="border-very-dark-blue/15 mx-auto max-w-prose border-t">
+    <ul className="border-very-dark-blue/15 mx-auto max-w-copy border-t">
       {faqs.map((faq, index) => {
         const open = index === openIndex;
         return (

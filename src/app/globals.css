@@ -10,7 +10,7 @@
   --color-rule: rgb(73 93 207 / 0.2);
 
   --container-page: 69.375rem;
-  --container-prose: 33.75rem;
+  --container-copy: 33.75rem;
   --container-tabs: 45.625rem;
 
   --radius-cta: 5px;
@@ -69,7 +69,7 @@
 }
 
 @utility v-footer-link {
-  @apply text-very-dark-blue hover:text-soft-blue rounded-xs font-medium underline underline-offset-2 transition-colors;
+  @apply hover:text-soft-red rounded-xs font-medium underline underline-offset-2 transition-colors;
 }
 
 @utility v-btn {

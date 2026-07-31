@@ -10,7 +10,7 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export default function Newsletter() {
   const [invalid, setInvalid] = useState(false);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     const email = new FormData(event.currentTarget).get("email");
     setInvalid(!emailPattern.test(String(email)));

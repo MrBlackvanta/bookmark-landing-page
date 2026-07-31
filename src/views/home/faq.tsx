@@ -8,7 +8,7 @@ export default function Faq() {
       aria-labelledby="faq-heading"
       className="px-8 pt-35 md:px-10 md:pt-37.25"
     >
-      <div className="mx-auto max-w-prose text-center">
+      <div className="mx-auto max-w-copy text-center">
         <h2
           id="faq-heading"
           className="text-very-dark-blue text-heading tracking-heading md:text-heading-lg leading-7.5 font-medium md:leading-13"

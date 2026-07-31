@@ -10,6 +10,10 @@ export default function MobileMenu() {
   const panelRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
+  function dismiss() {
+    setOpen(false);
+  }
+
   function close() {
     setOpen(false);
     triggerRef.current?.focus();
@@ -104,7 +108,7 @@ export default function MobileMenu() {
               <li key={link.href} className="border-b border-white/15">
                 <a
                   href={link.href}
-                  onClick={close}
+                  onClick={dismiss}
                   className="hover:text-soft-red text-nav-overlay tracking-nav block py-6 text-center uppercase transition-colors"
                 >
                   {link.label}
@@ -116,7 +120,7 @@ export default function MobileMenu() {
 
         <a
           href="#login"
-          onClick={close}
+          onClick={dismiss}
           className="hover:text-very-dark-blue rounded-cta text-nav-overlay tracking-nav mt-6 flex h-12 items-center justify-center border-2 border-white font-medium uppercase transition-colors hover:bg-white"
         >
           Login
