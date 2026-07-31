@@ -23,7 +23,7 @@ export default function Header() {
             <li>
               <a
                 href="#login"
-                className="border-soft-red bg-soft-red shadow-cta rounded-cta text-nav tracking-nav hover:text-soft-red ms-1 inline-flex h-10 items-center border-2 px-8 font-medium text-white uppercase transition-colors hover:bg-white"
+                className="border-soft-red-deep bg-soft-red-deep shadow-cta rounded-cta text-nav tracking-nav hover:text-soft-red-deep ms-1 inline-flex h-10 items-center border-2 px-8 font-medium text-white uppercase transition-colors hover:bg-white"
               >
                 Login
               </a>

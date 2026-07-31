@@ -3,7 +3,8 @@
 @theme {
   --color-soft-blue: hsl(231, 69%, 60%);
   --color-soft-red: hsl(0, 94%, 66%);
-  --color-grayish-blue: hsl(229, 8%, 60%);
+  --color-soft-red-deep: hsl(0, 94%, 47%);
+  --color-grayish-blue: hsl(229, 8%, 48%);
   --color-dark-grayish-blue: hsl(228, 12%, 41%);
   --color-very-dark-blue: hsl(229, 31%, 21%);
   --color-off-white: #f7f7f7;
@@ -81,7 +82,7 @@
 }
 
 @utility v-btn-accent {
-  @apply border-soft-red bg-soft-red hover:text-soft-red text-white hover:bg-white;
+  @apply border-soft-red-deep bg-soft-red-deep hover:text-soft-red-deep text-white hover:bg-white;
 }
 
 @utility v-btn-secondary {

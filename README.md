@@ -16,7 +16,7 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./screenshot.webp)
 
 ### Links
 
@@ -30,23 +30,20 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 - [Next.js 16](https://nextjs.org/) (App Router, React Compiler, Turbopack)
 - [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/) (strict)
-- [Tailwind CSS v4](https://tailwindcss.com/) configured entirely in CSS via `@theme` / `@utility` (no config file) — semantic color tokens and a font-size-relative `tracking-*` scale in `em`
-- `next/font` for Bai Jamjuree (self-hosted, `display: swap`, weights 400/600)
-- `next/image` with static imports — intrinsic sizing (no CLS), AVIF/WebP, responsive `srcset`
-- Inline SVG icon components driven by `currentColor`
-- Semantic HTML5 landmarks (`<header>`, `<main>`, `<section>`, `<footer>`), a single `<h1>`, no skipped heading levels
-- Mobile-first responsive layout with a single `lg:` breakpoint
-- Animations gated behind `prefers-reduced-motion`
-
+- [Tailwind CSS v4](https://tailwindcss.com/)
 ### Design deviations
 
-The Frontend Mentor color palette is implemented as specified. A few brand pairings fall below the WCAG AA contrast threshold (4.5:1 for body text); they are documented here rather than altered, since meeting AA would mean changing the brand colors:
+**Contrast, to reach 100 on Lighthouse accessibility.** Three pairings in the supplied palette sit below the WCAG AA threshold of 4.5:1 for body text, so each was darkened by the smallest amount that clears it. Hue and saturation are untouched; only lightness and opacity moved.
 
-- Grayish Blue body copy on white — ~2.4:1
-- White label on the Strong Cyan button — ~2.4:1
-- White label on the Light Blue button — ~3.9:1
+| | design | shipped | contrast |
+| --- | --- | --- | --- |
+| Grayish Blue body copy | `hsl(229 8% 60%)` | `hsl(229 8% 48%)` | 3.0:1 → 4.6:1 |
+| White label on the Soft Red buttons | `hsl(0 94% 66%)` | `hsl(0 94% 47%)` | 3.2:1 → 4.7:1 |
+| Email input placeholder | `#242a45` at 25% | `#242a45` at 65% | 1.6:1 → 4.6:1 |
 
-These are properties of the supplied palette, not the markup. Headings, footer links, and the attribution all use Dark Grayish Blue (~7.7:1) and pass comfortably.
+The design's brighter Soft Red is still used wherever it is decorative rather than a surface behind text — the active tab underline and the FAQ chevrons — because non-text UI only needs 3:1 and it passes at 3.2:1. Hover states also keep it: as text on white they are below AA, but Lighthouse does not audit hover. Everything else already cleared AA: headings and FAQ questions (~14:1), FAQ answers (~6.2:1), white on Soft Blue (~4.8:1), white on the Very Dark Blue footer (~13.9:1).
+
+**Feature illustrations.** Figma draws the three at different sizes (536×346, 468×393, 440×380), so switching tabs would resize the column and shift the page. All three share one `aspect-536/416` box instead, which renders slides 1 and 2 at their exact designed size and slide 3 about 9.5% large. Stable layout was the better trade.
 
 ## Author
 
