@@ -82,9 +82,8 @@ export default function MobileMenu() {
         aria-label="Menu"
         inert={!open}
         className={cn(
-          "bg-very-dark-blue/95 fixed inset-0 z-50 flex flex-col overflow-y-auto px-8 pt-10 pb-12 text-white",
-          "hidden opacity-0 transition-[opacity,display] transition-discrete duration-300 ease-out motion-reduce:transition-none",
-          { "opacity-100 starting:opacity-0": open },
+          "bg-very-dark-blue/95 fixed inset-0 z-50 hidden flex-col overflow-y-auto px-8 pt-10 pb-12 text-white opacity-0 transition-[opacity,display] transition-discrete duration-300 ease-out motion-reduce:transition-none",
+          { "flex opacity-100 starting:opacity-0": open },
         )}
       >
         <div className="flex items-center justify-between">

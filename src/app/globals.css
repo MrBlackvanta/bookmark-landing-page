@@ -38,6 +38,8 @@
   --text-tab--line-height: 1.0625rem;
   --text-nav: 0.8125rem;
   --text-nav--line-height: 1.0625rem;
+  --text-nav-footer: 0.9375rem;
+  --text-nav-footer--line-height: 1.0625rem;
   --text-nav-overlay: 1.25rem;
   --text-nav-overlay--line-height: 1.0625rem;
   --text-cta: 0.875rem;
@@ -76,6 +78,10 @@
 
 @utility v-btn-primary {
   @apply border-soft-blue bg-soft-blue hover:text-soft-blue text-white hover:bg-white;
+}
+
+@utility v-btn-accent {
+  @apply border-soft-red bg-soft-red hover:text-soft-red text-white hover:bg-white;
 }
 
 @utility v-btn-secondary {

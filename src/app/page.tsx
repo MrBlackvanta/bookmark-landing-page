@@ -1,4 +1,4 @@
-import { Download, Features, Hero } from "@/views/home";
+import { Download, Faq, Features, Hero, Newsletter } from "@/views/home";
 
 export default function Home() {
   return (
@@ -6,6 +6,8 @@ export default function Home() {
       <Hero />
       <Features />
       <Download />
+      <Faq />
+      <Newsletter />
     </main>
   );
 }

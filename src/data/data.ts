@@ -8,9 +8,11 @@ import { FacebookIcon, TwitterIcon } from "@/components/icons";
 import type {
   CtaButton,
   ExtensionCard,
+  FaqItem,
   Feature,
   HeroContent,
   NavLink,
+  NewsletterContent,
   SectionIntro,
   SocialLink,
 } from "./data.types";
@@ -81,3 +83,30 @@ export const extensions: ExtensionCard[] = [
   { browser: "Firefox", logo: firefoxLogo, minVersion: "55" },
   { browser: "Opera", logo: operaLogo, minVersion: "46" },
 ];
+
+export const faqIntro: SectionIntro = {
+  title: "Frequently Asked Questions",
+  description:
+    "Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.",
+};
+
+const placeholderAnswer =
+  "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.";
+
+export const faqs: FaqItem[] = [
+  { question: "What is Bookmark?", answer: placeholderAnswer },
+  { question: "How can I request a new browser?", answer: placeholderAnswer },
+  { question: "Is there a mobile app?", answer: placeholderAnswer },
+  {
+    question: "What about other Chromium browsers?",
+    answer: placeholderAnswer,
+  },
+];
+
+export const newsletter: NewsletterContent = {
+  eyebrow: "35,000+ already joined",
+  title: "Stay up-to-date with what we're doing",
+  placeholder: "Enter your email address",
+  submitLabel: "Contact Us",
+  invalidMessage: "Whoops, make sure it's an email",
+};

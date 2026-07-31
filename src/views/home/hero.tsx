@@ -41,12 +41,10 @@ export default function Hero() {
               <a
                 key={button.label}
                 href={button.href}
-                className={cn(
-                  "v-btn px-3.5 md:px-5.5",
-                  button.variant === "primary"
-                    ? "v-btn-primary"
-                    : "v-btn-secondary",
-                )}
+                className={cn("v-btn px-3.5 md:px-5.5", {
+                  "v-btn-primary": button.variant === "primary",
+                  "v-btn-secondary": button.variant === "secondary",
+                })}
               >
                 {button.label}
               </a>

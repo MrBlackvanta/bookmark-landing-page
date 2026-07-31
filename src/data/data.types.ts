@@ -34,3 +34,16 @@ export type ExtensionCard = {
   logo: StaticImageData;
   minVersion: string;
 };
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type NewsletterContent = {
+  eyebrow: string;
+  title: string;
+  placeholder: string;
+  submitLabel: string;
+  invalidMessage: string;
+};

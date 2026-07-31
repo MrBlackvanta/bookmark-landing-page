@@ -62,18 +62,18 @@ export default function FeatureTabs() {
               tabIndex={selected ? 0 : -1}
               onClick={() => setActive(index)}
               className={cn(
-                "border-rule flex w-full cursor-pointer justify-center border-b md:w-auto md:flex-1 md:border-b-0",
-                selected
-                  ? "text-very-dark-blue"
-                  : "text-very-dark-blue/75 hover:text-soft-red",
+                "border-rule text-very-dark-blue/75 hover:text-soft-red flex w-full cursor-pointer justify-center border-b md:w-auto md:flex-1 md:border-b-0",
+                {
+                  "text-very-dark-blue hover:text-very-dark-blue": selected,
+                },
               )}
             >
               <span className="inline-flex flex-col items-center pt-5 md:w-full md:py-0">
                 <span className="text-tab tracking-tab">{feature.tab}</span>
                 <span
                   className={cn(
-                    "mt-4 h-1 w-full rounded-full md:mt-6.75",
-                    selected ? "bg-soft-red" : "bg-transparent",
+                    "mt-4 h-1 w-full rounded-full bg-transparent md:mt-6.75",
+                    { "bg-soft-red": selected },
                   )}
                 />
               </span>
