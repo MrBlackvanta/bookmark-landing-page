@@ -21,7 +21,8 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 ### Links
 
 - Solution URL: [GitHub](https://github.com/MrBlackvanta/bookmark-landing-page)
-- Live Site URL: [Netlify](https://vanta-bookmark-landing-page.netlify.app)
+- Live Site URL: [Cloudflare](https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev)
+- Mirror: [Netlify](https://vanta-bookmark-landing-page.netlify.app)
 
 ## My process
 

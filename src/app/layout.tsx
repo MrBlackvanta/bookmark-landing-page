@@ -13,7 +13,7 @@ const rubik = Rubik({
 const title = "Bookmark landing page";
 const description =
   "A clean bookmark manager landing page — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://vanta-bookmark-landing-page.netlify.app";
+const siteUrl = "https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
