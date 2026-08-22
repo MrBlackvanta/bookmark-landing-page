@@ -10,13 +10,23 @@ const rubik = Rubik({
   display: "swap",
 });
 
-const title = "Bookmark landing page";
+const SITE_URL =
+  "https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev";
+
+const name = "Bookmark";
+const title = `${name} | A simple bookmark manager`;
 const description =
-  "A clean bookmark manager landing page — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev";
+  "A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly.";
+
+const shareImage = {
+  url: "/opengraph-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Bookmark, a browser extension that organizes your favourite websites.",
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title,
   description,
   alternates: { canonical: "/" },
@@ -24,14 +34,16 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    siteName: title,
+    siteName: name,
     locale: "en_US",
     type: "website",
+    images: [shareImage],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
+    images: [shareImage],
   },
 };
 
