@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
   reactCompiler: true,
-  allowedDevOrigins: ["192.168.1.35"],
+  turbopack: { root: import.meta.dirname },
+  allowedDevOrigins: ["192.168.*.*"],
 };
 
 export default nextConfig;
