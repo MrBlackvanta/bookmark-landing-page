@@ -38,16 +38,7 @@ export default function Footer() {
       </div>
 
       <div className="px-6 pb-0.5 text-center text-sm">
-        Challenge by{" "}
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="v-footer-link"
-        >
-          Frontend Mentor
-        </a>
-        . Coded by{" "}
+        Coded by{" "}
         <a
           href="https://www.linkedin.com/in/abdelrhman-vanta/"
           target="_blank"

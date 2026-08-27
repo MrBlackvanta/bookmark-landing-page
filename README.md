@@ -22,7 +22,6 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 - Solution URL: [GitHub](https://github.com/MrBlackvanta/bookmark-landing-page)
 - Live Site URL: [Cloudflare](https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev)
-- Mirror: [Netlify](https://vanta-bookmark-landing-page.netlify.app)
 
 ## My process
 
@@ -48,6 +47,6 @@ The design's brighter Soft Red is still used wherever it is decorative rather th
 
 ## Author
 
-- UpWork - [Abdelrhman Abdelaal](https://upwork.com/freelancers/~01f0a9479696b61f49)
+- UpWork - [Abdelrhman Abdelaal](https://www.upwork.com/freelancers/mrblackvanta)
 - Frontend Mentor - [@MrBlackvanta](https://www.frontendmentor.io/profile/MrBlackvanta)
 - LinkedIn - [Abdelrhman Abdelaal](https://www.linkedin.com/in/abdelrhman-vanta/)
