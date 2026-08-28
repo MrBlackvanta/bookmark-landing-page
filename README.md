@@ -1,52 +1,41 @@
-# Frontend Mentor - Bookmark landing page solution
+# Bookmark landing page
 
-This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
-## Table of contents
-
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Design deviations](#design-deviations)
-- [Author](#author)
-
-## Overview
-
-### Screenshot
+My solution to the [Bookmark landing page](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158)
+challenge on Frontend Mentor.
 
 ![](./screenshot.webp)
 
-### Links
+- Live: https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev
+- Code: https://github.com/MrBlackvanta/bookmark-landing-page
 
-- Solution URL: [GitHub](https://github.com/MrBlackvanta/bookmark-landing-page)
-- Live Site URL: [Cloudflare](https://bookmark-landing-page.abdelrhman-ahmed8881.workers.dev)
+## Built with
 
-## My process
+- Next.js 16, App Router
+- React 19 and TypeScript
+- Tailwind CSS v4
 
-### Built with
+## Notes
 
-- [Next.js 16](https://nextjs.org/) (App Router, React Compiler, Turbopack)
-- [React 19](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/) (strict)
-- [Tailwind CSS v4](https://tailwindcss.com/)
-### Design deviations
+**Contrast.** Three pairings in the supplied palette are under 4.5:1, so I darkened each
+by the smallest amount that clears it. Hue and saturation stay put.
 
-**Contrast, to reach 100 on Lighthouse accessibility.** Three pairings in the supplied palette sit below the WCAG AA threshold of 4.5:1 for body text, so each was darkened by the smallest amount that clears it. Hue and saturation are untouched; only lightness and opacity moved.
+|                                 | design            | built             | contrast   |
+| ------------------------------- | ----------------- | ----------------- | ---------- |
+| Grayish Blue body copy          | `hsl(229 8% 60%)` | `hsl(229 8% 48%)` | 3.0 to 4.6 |
+| White label on Soft Red buttons | `hsl(0 94% 66%)`  | `hsl(0 94% 47%)`  | 3.2 to 4.7 |
+| Email placeholder               | `#242a45` at 25%  | `#242a45` at 65%  | 1.6 to 4.6 |
 
-| | design | shipped | contrast |
-| --- | --- | --- | --- |
-| Grayish Blue body copy | `hsl(229 8% 60%)` | `hsl(229 8% 48%)` | 3.0:1 → 4.6:1 |
-| White label on the Soft Red buttons | `hsl(0 94% 66%)` | `hsl(0 94% 47%)` | 3.2:1 → 4.7:1 |
-| Email input placeholder | `#242a45` at 25% | `#242a45` at 65% | 1.6:1 → 4.6:1 |
+The brighter Soft Red is still used where it's decorative rather than a surface behind
+text, like the active tab underline and the FAQ chevrons. Non-text UI only needs 3:1.
+Hover states keep it too.
 
-The design's brighter Soft Red is still used wherever it is decorative rather than a surface behind text — the active tab underline and the FAQ chevrons — because non-text UI only needs 3:1 and it passes at 3.2:1. Hover states also keep it: as text on white they are below AA, but Lighthouse does not audit hover. Everything else already cleared AA: headings and FAQ questions (~14:1), FAQ answers (~6.2:1), white on Soft Blue (~4.8:1), white on the Very Dark Blue footer (~13.9:1).
-
-**Feature illustrations.** Figma draws the three at different sizes (536×346, 468×393, 440×380), so switching tabs would resize the column and shift the page. All three share one `aspect-536/416` box instead, which renders slides 1 and 2 at their exact designed size and slide 3 about 9.5% large. Stable layout was the better trade.
+**Feature illustrations share one box.** Figma draws the three at different sizes, so
+switching tabs would resize the column and shift the page. They all sit in one
+`aspect-536/416` frame instead. Slides 1 and 2 land at their designed size and slide 3
+renders about 9.5% large. A stable layout was worth more than the 9.5%.
 
 ## Author
 
-- UpWork - [Abdelrhman Abdelaal](https://www.upwork.com/freelancers/mrblackvanta)
-- Frontend Mentor - [@MrBlackvanta](https://www.frontendmentor.io/profile/MrBlackvanta)
-- LinkedIn - [Abdelrhman Abdelaal](https://www.linkedin.com/in/abdelrhman-vanta/)
+- [LinkedIn](https://www.linkedin.com/in/abdelrhman-vanta/)
+- [UpWork](https://www.upwork.com/freelancers/mrblackvanta)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/MrBlackvanta)
